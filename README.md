@@ -56,3 +56,14 @@ Boost (`64=4`) is not exposed: the hood it was tested on does not react to it.
 ## Disclaimer
 
 This integration reverse-engineered the Elica Connect cloud API via mitmproxy. It is not affiliated with or endorsed by Elica S.p.A.
+
+## Releasing
+
+Versions follow `MAJOR.MINOR.PATCH` and live in `custom_components/elica_connect/manifest.json`.
+
+```bash
+./scripts/release.sh 0.3.1
+```
+
+The script bumps the manifest version, commits, creates the `v0.3.1` tag and pushes it.
+The `Release` GitHub Action checks that the tag matches the manifest and publishes a GitHub release, which HACS shows as an update.
