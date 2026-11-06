@@ -27,8 +27,10 @@ CAP_FAN_SPEED = 110    # 0=off, 1=low, 2=medium, 3=high (not used for boost)
 CAP_FAN_MODE = 64      # 1=normal operation, 4=boost mode
 CAP_LIGHT_BRIGHTNESS = 96  # light brightness 0–100 (%; 0=off)
 
-# Fan speed levels (0=off, 1-3=normal, 4=boost)
-FAN_SPEED_TO_PCT = {0: 0, 1: 25, 2: 50, 3: 75, 4: 100}
+# Fan speed levels: 0=off, 1-3=normal speeds; boost is a separate preset
+FAN_SPEED_COUNT = 3
+FAN_SPEED_BOOST = 4  # internal key for boost in FAN_CMD
+PRESET_BOOST = "boost"
 
 # Fan commands (capability payloads) as observed from app
 FAN_CMD = {
