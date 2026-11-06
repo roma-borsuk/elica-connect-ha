@@ -8,14 +8,14 @@ Unofficial Home Assistant custom component for **Elica Connect** range hoods (ES
 
 | Entity | Type | Description |
 |--------|------|-------------|
-| Fan | `fan` | 4 speeds + boost (100%) |
+| Fan | `fan` | 3 speeds |
 | Light | `light` | On/off + brightness 0–100% |
 | Filter | `sensor` | Grease filter efficiency % |
 
 ## Installation
 
 ### HACS (recommended)
-1. In HACS → Custom repositories → add `benedettosiddi/elica-connect-ha` as **Integration**
+1. In HACS → Custom repositories → add `roma-borsuk/elica-connect-ha` as **Integration**
 2. Install **Elica Connect**
 3. Restart Home Assistant
 
@@ -33,10 +33,11 @@ Copy `custom_components/elica_connect/` into your HA `custom_components/` direct
 | HA percentage | Speed |
 |---|---|
 | 0% | Off |
-| 25% | Low |
-| 50% | Medium |
-| 75% | High |
-| 100% | Boost |
+| 33% | Low |
+| 66% | Medium |
+| 100% | High |
+
+Boost (`64=4`) is not exposed: the hood it was tested on does not react to it.
 
 ## Capability codes (dataModelIdx 8)
 
